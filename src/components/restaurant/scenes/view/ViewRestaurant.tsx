@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import useFetchRestaurant from "../../../../hooks/FetchRestaurantHook";
 import LandingImage from "../../../../pages/landing/LandingImage";
+import MenuItemsList from "../../../menu-items/item-list/MenuItemsList";
 import "./ViewRestaurant.css";
 
 const ViewRestaurant = () => {
@@ -60,6 +61,9 @@ const ViewRestaurant = () => {
             <div className="container-information">
               <h3 className="information-style mr-10">Email:</h3>
               {restaurant.email}
+            </div>
+            <div className="mt-10">
+              <MenuItemsList withFetch={true} />
             </div>
           </div>
         </div>

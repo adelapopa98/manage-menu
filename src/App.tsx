@@ -11,6 +11,7 @@ import ManageRestaurant from "./components/restaurant/scenes/manage/ManageRestau
 import ViewRestaurant from "./components/restaurant/scenes/view/ViewRestaurant";
 import EditRestaurant from "./components/restaurant/edit/EditRestaurant";
 import Restaurants from "./components/restaurant/scenes/view/ViewAllRestaurants";
+import ManageMenu from "./pages/manage-menu/ManageMenu";
 
 function App() {
   return (
@@ -64,6 +65,14 @@ function App() {
               element={
                 <ProtectedRoute>
                   <Restaurants />
+                </ProtectedRoute>
+              }
+            />
+             <Route
+              path={PagesPaths.MANAGE_MENU}
+              element={
+                <ProtectedRoute>
+                  <ManageMenu />
                 </ProtectedRoute>
               }
             />
